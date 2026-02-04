@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e39ccc3e0d4ae1d0daf31f0e606c9b3e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_e39ccc3e0d4ae1d0daf31f0e606c9b3e" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e39ccc3e0d4ae1d0daf31f0e606c9b3e = L.map(
+                "map_e39ccc3e0d4ae1d0daf31f0e606c9b3e",
+                {
+                    center: [7.380972222222214, 3.8894444444444396],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 8,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ff3f347abef787da2e140cab7b8d67ef = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_ff3f347abef787da2e140cab7b8d67ef.addTo(map_e39ccc3e0d4ae1d0daf31f0e606c9b3e);
+        
+    
+        function geo_json_7ba9601f3aa8dcd7c6f56681bf285c4f_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "#3186cc", "fillOpacity": 0.5, "weight": 2};
+            }
+        }
+
+        function geo_json_7ba9601f3aa8dcd7c6f56681bf285c4f_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_7ba9601f3aa8dcd7c6f56681bf285c4f = L.geoJson(null, {
+                onEachFeature: geo_json_7ba9601f3aa8dcd7c6f56681bf285c4f_onEachFeature,
+            
+                style: geo_json_7ba9601f3aa8dcd7c6f56681bf285c4f_styler,
+            ...{
+}
+        });
+
+        function geo_json_7ba9601f3aa8dcd7c6f56681bf285c4f_add (data) {
+            geo_json_7ba9601f3aa8dcd7c6f56681bf285c4f
+                .addData(data);
+        }
+            geo_json_7ba9601f3aa8dcd7c6f56681bf285c4f_add({"bbox": [3.86944444444444, 7.32666666666666, 3.91472222222222, 7.43333333333332], "features": [{"bbox": [3.86944444444444, 7.39388888888888, 3.86944444444444, 7.39388888888888], "geometry": {"coordinates": [3.86944444444444, 7.39388888888888], "type": "Point"}, "id": "44843", "properties": {"Aspect": 45.0, "Curvature ": -3888000000.0, "Drainage": 207.6181, "FA": 108.0, "Rainfall": 81.95315068493149, "SUSCEP": "No_Flood", "Slope": 19.4712200164794, "TWI": -2.45762014389038, "X": 3.86944444444444, "Y": 7.39388888888888}, "type": "Feature"}, {"bbox": [3.87722222222222, 7.32666666666666, 3.87722222222222, 7.32666666666666], "geometry": {"coordinates": [3.87722222222222, 7.32666666666666], "type": "Point"}, "id": "133687", "properties": {"Aspect": 153.434951782226, "Curvature ": -3888000000.0, "Drainage": 205.2826, "FA": 6.0, "Rainfall": 73.48164383561638, "SUSCEP": "No_Flood", "Slope": 29.2059326171875, "TWI": -5.66120338439941, "X": 3.87722222222222, "Y": 7.32666666666666}, "type": "Feature"}, {"bbox": [3.87083333333333, 7.33944444444444, 3.87083333333333, 7.33944444444444], "geometry": {"coordinates": [3.87083333333333, 7.33944444444444], "type": "Point"}, "id": "119492", "properties": {"Aspect": -1.0, "Curvature ": 1296000000.0, "Drainage": 209.4476, "FA": 0.0, "Rainfall": 83.3953424657534, "SUSCEP": "No_Flood", "Slope": 0.0, "TWI": -1.28093385696411, "X": 3.87083333333333, "Y": 7.33944444444444}, "type": "Feature"}, {"bbox": [3.90972222222222, 7.32694444444444, 3.90972222222222, 7.32694444444444], "geometry": {"coordinates": [3.90972222222222, 7.32694444444444], "type": "Point"}, "id": "133534", "properties": {"Aspect": 90.0, "Curvature ": 3888000000.0, "Drainage": 208.8641, "FA": 370.0, "Rainfall": 73.87342465753423, "SUSCEP": "No_Flood", "Slope": 26.5650520324707, "TWI": -1.57933974266052, "X": 3.90972222222222, "Y": 7.32694444444444}, "type": "Feature"}, {"bbox": [3.89138888888888, 7.43333333333332, 3.89138888888888, 7.43333333333332], "geometry": {"coordinates": [3.89138888888888, 7.43333333333332], "type": "Point"}, "id": "3120", "properties": {"Aspect": 251.565048217773, "Curvature ": -2592000000.0, "Drainage": 208.8641, "FA": 3.0, "Rainfall": 101.51561643835623, "SUSCEP": "No_Flood", "Slope": 21.5681285858154, "TWI": -5.87424564361572, "X": 3.89138888888888, "Y": 7.43333333333332}, "type": "Feature"}, {"bbox": [3.89527777777777, 7.42555555555555, 3.89527777777777, 7.42555555555555], "geometry": {"coordinates": [3.89527777777777, 7.42555555555555], "type": "Point"}, "id": "9074", "properties": {"Aspect": 339.227752685546, "Curvature ": -5184000000.0, "Drainage": 234.8922, "FA": 4.0, "Rainfall": 65.15890410958903, "SUSCEP": "Very_High", "Slope": 75.5369110107421, "TWI": -7.93431520462036, "X": 3.89527777777777, "Y": 7.42555555555555}, "type": "Feature"}, {"bbox": [3.89166666666666, 7.41277777777777, 3.89166666666666, 7.41277777777777], "geometry": {"coordinates": [3.89166666666666, 7.41277777777777], "type": "Point"}, "id": "21282", "properties": {"Aspect": 205.906509399414, "Curvature ": 3888000000.0, "Drainage": 229.5629, "FA": 0.0, "Rainfall": 78.98684931506847, "SUSCEP": "Very_High", "Slope": 78.3817825317382, "TWI": -9.77050113677978, "X": 3.89166666666666, "Y": 7.41277777777777}, "type": "Feature"}, {"bbox": [3.91472222222222, 7.33944444444444, 3.91472222222222, 7.33944444444444], "geometry": {"coordinates": [3.91472222222222, 7.33944444444444], "type": "Point"}, "id": "119650", "properties": {"Aspect": 301.429565429687, "Curvature ": -3888000000.0, "Drainage": 227.1604, "FA": 4.0, "Rainfall": 85.66301369863007, "SUSCEP": "Very_High", "Slope": 79.2631454467773, "TWI": -8.24199199676513, "X": 3.91472222222222, "Y": 7.33944444444444}, "type": "Feature"}, {"bbox": [3.87833333333333, 7.41083333333332, 3.87833333333333, 7.41083333333332], "geometry": {"coordinates": [3.87833333333333, 7.41083333333332], "type": "Point"}, "id": "23257", "properties": {"Aspect": 20.7722549438476, "Curvature ": 3888000000.0, "Drainage": 230.3318, "FA": 14.0, "Rainfall": 76.85753424657534, "SUSCEP": "Very_High", "Slope": 75.5369110107421, "TWI": -6.83570289611816, "X": 3.87833333333333, "Y": 7.41083333333332}, "type": "Feature"}, {"bbox": [3.89583333333333, 7.40083333333332, 3.89583333333333, 7.40083333333332], "geometry": {"coordinates": [3.89583333333333, 7.40083333333332], "type": "Point"}, "id": "35472", "properties": {"Aspect": 11.3099327087402, "Curvature ": -11664000000.0, "Drainage": 234.8922, "FA": 18.0, "Rainfall": 68.14082191780818, "SUSCEP": "Very_High", "Slope": 77.3669204711914, "TWI": -6.73976564407348, "X": 3.89583333333333, "Y": 7.40083333333332}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_7ba9601f3aa8dcd7c6f56681bf285c4f.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["Slope", "TWI", "Drainage", "Rainfall"];
+    let aliases = ["kemiringan wilayah:", "Indeks kelembapan:", "Jumlah drainase", "Curah hujan:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_7ba9601f3aa8dcd7c6f56681bf285c4f.addTo(map_e39ccc3e0d4ae1d0daf31f0e606c9b3e);
+        
+    
+            var marker_c9f3f2b2292575e27938ff683f762fb5 = L.marker(
+                [7.39388888888888, 3.86944444444444],
+                {
+}
+            ).addTo(map_e39ccc3e0d4ae1d0daf31f0e606c9b3e);
+        
+    
+            var icon_48c4a9a664039c9c14add0a532e88749 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c658960201ede884b8bc399a33d65e82 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_30071a9cbe948f4a6bcbfcac429436d4 = $(`<div id="html_30071a9cbe948f4a6bcbfcac429436d4" style="width: 100.0%; height: 100.0%;">kemiringan wilayah 19.47<br>Indeks kelembapan wilaya -2.46<br>Jumlah drainase 207.6181<br>Curah hujan: 81.95 </div>`)[0];
+                popup_c658960201ede884b8bc399a33d65e82.setContent(html_30071a9cbe948f4a6bcbfcac429436d4);
+            
+        
+
+        marker_c9f3f2b2292575e27938ff683f762fb5.bindPopup(popup_c658960201ede884b8bc399a33d65e82)
+        ;
+
+        
+    
+    
+                marker_c9f3f2b2292575e27938ff683f762fb5.setIcon(icon_48c4a9a664039c9c14add0a532e88749);
+            
+    
+            var marker_f2ca178b1efc2a67428b24827faab79b = L.marker(
+                [7.32666666666666, 3.87722222222222],
+                {
+}
+            ).addTo(map_e39ccc3e0d4ae1d0daf31f0e606c9b3e);
+        
+    
+            var icon_85f06854fc89d3812d2e48dfb6b5d199 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fb7e00e99036113a0ee6836954f38bca = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e1eb1ef71caf7d40a5ff53800323b563 = $(`<div id="html_e1eb1ef71caf7d40a5ff53800323b563" style="width: 100.0%; height: 100.0%;">kemiringan wilayah 29.21<br>Indeks kelembapan wilaya -5.66<br>Jumlah drainase 205.2826<br>Curah hujan: 73.48 </div>`)[0];
+                popup_fb7e00e99036113a0ee6836954f38bca.setContent(html_e1eb1ef71caf7d40a5ff53800323b563);
+            
+        
+
+        marker_f2ca178b1efc2a67428b24827faab79b.bindPopup(popup_fb7e00e99036113a0ee6836954f38bca)
+        ;
+
+        
+    
+    
+                marker_f2ca178b1efc2a67428b24827faab79b.setIcon(icon_85f06854fc89d3812d2e48dfb6b5d199);
+            
+    
+            var marker_fef315800ba03fce6cdffe580f9e39a4 = L.marker(
+                [7.33944444444444, 3.87083333333333],
+                {
+}
+            ).addTo(map_e39ccc3e0d4ae1d0daf31f0e606c9b3e);
+        
+    
+            var icon_c72dbd228e84bb4cfa4104d5e0267902 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7446caee7e57f092597a798c5a0e5b87 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ffc8494d2588590026f0d8bf1e7ed4e2 = $(`<div id="html_ffc8494d2588590026f0d8bf1e7ed4e2" style="width: 100.0%; height: 100.0%;">kemiringan wilayah 0.00<br>Indeks kelembapan wilaya -1.28<br>Jumlah drainase 209.4476<br>Curah hujan: 83.40 </div>`)[0];
+                popup_7446caee7e57f092597a798c5a0e5b87.setContent(html_ffc8494d2588590026f0d8bf1e7ed4e2);
+            
+        
+
+        marker_fef315800ba03fce6cdffe580f9e39a4.bindPopup(popup_7446caee7e57f092597a798c5a0e5b87)
+        ;
+
+        
+    
+    
+                marker_fef315800ba03fce6cdffe580f9e39a4.setIcon(icon_c72dbd228e84bb4cfa4104d5e0267902);
+            
+    
+            var marker_208e2ed4e8c84eb4a4fc599bf8cc832d = L.marker(
+                [7.32694444444444, 3.90972222222222],
+                {
+}
+            ).addTo(map_e39ccc3e0d4ae1d0daf31f0e606c9b3e);
+        
+    
+            var icon_d7135b8bb87f19a4d55b1f9c6cbc8bed = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_49aa4f0e2f51665c554ceedea49fa6b1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7ab379c44edb84872cd6032329c64a70 = $(`<div id="html_7ab379c44edb84872cd6032329c64a70" style="width: 100.0%; height: 100.0%;">kemiringan wilayah 26.57<br>Indeks kelembapan wilaya -1.58<br>Jumlah drainase 208.8641<br>Curah hujan: 73.87 </div>`)[0];
+                popup_49aa4f0e2f51665c554ceedea49fa6b1.setContent(html_7ab379c44edb84872cd6032329c64a70);
+            
+        
+
+        marker_208e2ed4e8c84eb4a4fc599bf8cc832d.bindPopup(popup_49aa4f0e2f51665c554ceedea49fa6b1)
+        ;
+
+        
+    
+    
+                marker_208e2ed4e8c84eb4a4fc599bf8cc832d.setIcon(icon_d7135b8bb87f19a4d55b1f9c6cbc8bed);
+            
+    
+            var marker_434ac505ce30c7dae139ea1b75a75a18 = L.marker(
+                [7.43333333333332, 3.89138888888888],
+                {
+}
+            ).addTo(map_e39ccc3e0d4ae1d0daf31f0e606c9b3e);
+        
+    
+            var icon_b268fdb40254d964f88be8656a969ba1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5e93fe6e071695c40f1117073f352703 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_43b0dce69754e6341246192344568db1 = $(`<div id="html_43b0dce69754e6341246192344568db1" style="width: 100.0%; height: 100.0%;">kemiringan wilayah 21.57<br>Indeks kelembapan wilaya -5.87<br>Jumlah drainase 208.8641<br>Curah hujan: 101.52 </div>`)[0];
+                popup_5e93fe6e071695c40f1117073f352703.setContent(html_43b0dce69754e6341246192344568db1);
+            
+        
+
+        marker_434ac505ce30c7dae139ea1b75a75a18.bindPopup(popup_5e93fe6e071695c40f1117073f352703)
+        ;
+
+        
+    
+    
+                marker_434ac505ce30c7dae139ea1b75a75a18.setIcon(icon_b268fdb40254d964f88be8656a969ba1);
+            
+    
+            var marker_2a35db5f685dfab0dbfb621eaf053b00 = L.marker(
+                [7.42555555555555, 3.89527777777777],
+                {
+}
+            ).addTo(map_e39ccc3e0d4ae1d0daf31f0e606c9b3e);
+        
+    
+            var icon_ae28498195a039d7de1724a292815c5c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0a9cc3078448765326924d25477b7f8a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ff20c133c05a154107905fc0a0f3f8c2 = $(`<div id="html_ff20c133c05a154107905fc0a0f3f8c2" style="width: 100.0%; height: 100.0%;">kemiringan wilayah 75.54<br>Indeks kelembapan wilaya -7.93<br>Jumlah drainase 234.8922<br>Curah hujan: 65.16 </div>`)[0];
+                popup_0a9cc3078448765326924d25477b7f8a.setContent(html_ff20c133c05a154107905fc0a0f3f8c2);
+            
+        
+
+        marker_2a35db5f685dfab0dbfb621eaf053b00.bindPopup(popup_0a9cc3078448765326924d25477b7f8a)
+        ;
+
+        
+    
+    
+                marker_2a35db5f685dfab0dbfb621eaf053b00.setIcon(icon_ae28498195a039d7de1724a292815c5c);
+            
+    
+            var marker_6ff7222c8bd7f8e49e1a81eb71a016fe = L.marker(
+                [7.41277777777777, 3.89166666666666],
+                {
+}
+            ).addTo(map_e39ccc3e0d4ae1d0daf31f0e606c9b3e);
+        
+    
+            var icon_f27b62acc18ca3a2381eb3124fa6a13b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_60411e816482bd04fdb31c9633d15806 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_87784750a44aee8845672cb955eae676 = $(`<div id="html_87784750a44aee8845672cb955eae676" style="width: 100.0%; height: 100.0%;">kemiringan wilayah 78.38<br>Indeks kelembapan wilaya -9.77<br>Jumlah drainase 229.5629<br>Curah hujan: 78.99 </div>`)[0];
+                popup_60411e816482bd04fdb31c9633d15806.setContent(html_87784750a44aee8845672cb955eae676);
+            
+        
+
+        marker_6ff7222c8bd7f8e49e1a81eb71a016fe.bindPopup(popup_60411e816482bd04fdb31c9633d15806)
+        ;
+
+        
+    
+    
+                marker_6ff7222c8bd7f8e49e1a81eb71a016fe.setIcon(icon_f27b62acc18ca3a2381eb3124fa6a13b);
+            
+    
+            var marker_51fc47c8e54655ceddedb1016f44902e = L.marker(
+                [7.33944444444444, 3.91472222222222],
+                {
+}
+            ).addTo(map_e39ccc3e0d4ae1d0daf31f0e606c9b3e);
+        
+    
+            var icon_516b2314bc16310b3938b1531658c58f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3c45b8a04a55fa0259e26d7c5140a400 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fda18839c903bab1cfed06eb2758b2ff = $(`<div id="html_fda18839c903bab1cfed06eb2758b2ff" style="width: 100.0%; height: 100.0%;">kemiringan wilayah 79.26<br>Indeks kelembapan wilaya -8.24<br>Jumlah drainase 227.1604<br>Curah hujan: 85.66 </div>`)[0];
+                popup_3c45b8a04a55fa0259e26d7c5140a400.setContent(html_fda18839c903bab1cfed06eb2758b2ff);
+            
+        
+
+        marker_51fc47c8e54655ceddedb1016f44902e.bindPopup(popup_3c45b8a04a55fa0259e26d7c5140a400)
+        ;
+
+        
+    
+    
+                marker_51fc47c8e54655ceddedb1016f44902e.setIcon(icon_516b2314bc16310b3938b1531658c58f);
+            
+    
+            var marker_16b326c9388fd7bab1772de3256951cb = L.marker(
+                [7.41083333333332, 3.87833333333333],
+                {
+}
+            ).addTo(map_e39ccc3e0d4ae1d0daf31f0e606c9b3e);
+        
+    
+            var icon_99d3e7f91dc10f83e5e7ccdc65f05415 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_38b2674fc0cf9018257b3175df54cb99 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_73608c4cdb536be118ebfdd7c2f19e10 = $(`<div id="html_73608c4cdb536be118ebfdd7c2f19e10" style="width: 100.0%; height: 100.0%;">kemiringan wilayah 75.54<br>Indeks kelembapan wilaya -6.84<br>Jumlah drainase 230.3318<br>Curah hujan: 76.86 </div>`)[0];
+                popup_38b2674fc0cf9018257b3175df54cb99.setContent(html_73608c4cdb536be118ebfdd7c2f19e10);
+            
+        
+
+        marker_16b326c9388fd7bab1772de3256951cb.bindPopup(popup_38b2674fc0cf9018257b3175df54cb99)
+        ;
+
+        
+    
+    
+                marker_16b326c9388fd7bab1772de3256951cb.setIcon(icon_99d3e7f91dc10f83e5e7ccdc65f05415);
+            
+    
+            var marker_85e741977bc0cfcd1c6337cbe44ed99c = L.marker(
+                [7.40083333333332, 3.89583333333333],
+                {
+}
+            ).addTo(map_e39ccc3e0d4ae1d0daf31f0e606c9b3e);
+        
+    
+            var icon_d8bab3f6383d22cd06e64e8882c1241f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7342f3e76069d7f1de83b4bd763c227b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ea1b2ce5f7518954a53573967f21ff0e = $(`<div id="html_ea1b2ce5f7518954a53573967f21ff0e" style="width: 100.0%; height: 100.0%;">kemiringan wilayah 77.37<br>Indeks kelembapan wilaya -6.74<br>Jumlah drainase 234.8922<br>Curah hujan: 68.14 </div>`)[0];
+                popup_7342f3e76069d7f1de83b4bd763c227b.setContent(html_ea1b2ce5f7518954a53573967f21ff0e);
+            
+        
+
+        marker_85e741977bc0cfcd1c6337cbe44ed99c.bindPopup(popup_7342f3e76069d7f1de83b4bd763c227b)
+        ;
+
+        
+    
+    
+                marker_85e741977bc0cfcd1c6337cbe44ed99c.setIcon(icon_d8bab3f6383d22cd06e64e8882c1241f);
+            
+</script>
+</html>
